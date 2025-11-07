@@ -136,6 +136,7 @@ class getting3gppInfoFiles:
                 file4 = file3.replace("&", "and")
                 file5 = file4.replace("(", "")
                 file6 = file5.replace(")", "")
+                file7 = file6.replace(",", "")
                 #print(file6.replace("\n", ""))
 
                 # Opening zip files, considering that all 3GPP files are following
@@ -154,9 +155,13 @@ class getting3gppInfoFiles:
                         extension_file_1 = extension_file_0[-3:]
                         #print(extension_file_1)
                         if extension_file_1 == 'ocx':
-                            new_name = folder_name + file6.replace("\n", "") + '.docx'
-                        else:
-                            new_name = folder_name + file6.replace("\n", "") + '.doc'
+                            new_name = folder_name + file7.replace("\n", "") + '.docx'
+                        if extension_file_1 == 'lsx':
+                            new_name = folder_name + file7.replace("\n", "") + '.xlsx'
+                        if extension_file_1 == 'ptx':
+                            new_name = folder_name + file7.replace("\n", "") + '.pptx'
+                        if extension_file_1 == 'doc':
+                            new_name = folder_name + file7.replace("\n", "") + '.doc'
                         with open(new_name, 'wb') as fh:
                             fh.write(data)
 
@@ -191,6 +196,7 @@ class getting3gppInfoFiles:
                     file4 = file3.replace("&", "and")
                     file5 = file4.replace("(", "")
                     file6 = file5.replace(")", "")
+                    file7 = file6.replace(",", "")
                     #print(file6.replace("\n", ""))
 
                     # Opening zip files, considering that all 3GPP files are following
@@ -207,11 +213,22 @@ class getting3gppInfoFiles:
                             # mapping the correct extension
                             extension_file_0 = f.filename
                             extension_file_1 = extension_file_0[-3:]
-                            #print(extension_file_1)
+                            print(extension_file_1)
+                            #if extension_file_1 == 'ocx':
+                            #    new_name = folder_name + file6.replace("\n", "") + '.docx'
+                            #else:
+                            #    new_name = folder_name + file6.replace("\n", "") + '.doc'
+                            #with open(new_name, 'wb') as fh:
+                            #    fh.write(data)
+
                             if extension_file_1 == 'ocx':
-                                new_name = folder_name + file6.replace("\n", "") + '.docx'
-                            else:
-                                new_name = folder_name + file6.replace("\n", "") + '.doc'
+                                new_name = folder_name + file7.replace("\n", "") + '.docx'
+                            if extension_file_1 == 'lsx':
+                                new_name = folder_name + file7.replace("\n", "") + '.xlsx'
+                            if extension_file_1 == 'ptx':
+                                new_name = folder_name + file7.replace("\n", "") + '.pptx'
+                            if extension_file_1 == 'doc':
+                                new_name = folder_name + file7.replace("\n", "") + '.doc'
                             with open(new_name, 'wb') as fh:
                                 fh.write(data)
         return 0
