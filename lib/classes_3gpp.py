@@ -154,16 +154,40 @@ class getting3gppInfoFiles:
                         extension_file_0 = f.filename
                         extension_file_1 = extension_file_0[-3:]
                         #print(extension_file_1)
-                        if extension_file_1 == 'ocx':
+                        if (extension_file_1 == 'ocx') or (extension_file_1 == 'OCX'):
                             new_name = folder_name + file7.replace("\n", "") + '.docx'
-                        if extension_file_1 == 'lsx':
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        if (extension_file_1 == 'lsx') or (extension_file_1 == 'LSX'):
                             new_name = folder_name + file7.replace("\n", "") + '.xlsx'
-                        if extension_file_1 == 'ptx':
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        if (extension_file_1 == 'ptx') or (extension_file_1 == 'PTX'):
                             new_name = folder_name + file7.replace("\n", "") + '.pptx'
-                        if extension_file_1 == 'doc':
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        if (extension_file_1 == 'doc') or (extension_file_1 == 'DOC'):
                             new_name = folder_name + file7.replace("\n", "") + '.doc'
-                        with open(new_name, 'wb') as fh:
-                            fh.write(data)
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        if (extension_file_1 == 'zip') or (extension_file_1 == 'ZIP'):
+                            new_name = folder_name + file7.replace("\n", "") + '.zip'
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        if (extension_file_1 == 'ppt') or (extension_file_1 == 'PPT'):
+                            new_name = folder_name + file7.replace("\n", "") + '.ppt'
+                            with open(new_name, 'wb') as fh:
+                                fh.write(data)
+                        #if extension_file_1 == 'ocx':
+                        #    new_name = folder_name + file7.replace("\n", "") + '.docx'
+                        #if extension_file_1 == 'lsx':
+                        #    new_name = folder_name + file7.replace("\n", "") + '.xlsx'
+                        #if extension_file_1 == 'ptx':
+                        #    new_name = folder_name + file7.replace("\n", "") + '.pptx'
+                        #if extension_file_1 == 'doc':
+                        #    new_name = folder_name + file7.replace("\n", "") + '.doc'
+                        #with open(new_name, 'wb') as fh:
+                        #    fh.write(data)
 
         return 0
 
@@ -213,22 +237,44 @@ class getting3gppInfoFiles:
                             # mapping the correct extension
                             extension_file_0 = f.filename
                             extension_file_1 = extension_file_0[-3:]
-                            print(extension_file_1)
+                            #print(extension_file_1)
                             #if extension_file_1 == 'ocx':
                             #    new_name = folder_name + file6.replace("\n", "") + '.docx'
                             #else:
                             #    new_name = folder_name + file6.replace("\n", "") + '.doc'
                             #with open(new_name, 'wb') as fh:
                             #    fh.write(data)
+                            if extension_file_1 == 'OCX':
+                                print(extension_file_0)
 
-                            if extension_file_1 == 'ocx':
+                            if (extension_file_1 == 'ocx') or (extension_file_1 == 'OCX'):
                                 new_name = folder_name + file7.replace("\n", "") + '.docx'
-                            if extension_file_1 == 'lsx':
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            if (extension_file_1 == 'lsx') or (extension_file_1 == 'LSX'):
                                 new_name = folder_name + file7.replace("\n", "") + '.xlsx'
-                            if extension_file_1 == 'ptx':
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            if (extension_file_1 == 'ptx') or (extension_file_1 == 'PTX'):
                                 new_name = folder_name + file7.replace("\n", "") + '.pptx'
-                            if extension_file_1 == 'doc':
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            if (extension_file_1 == 'doc') or (extension_file_1 == 'DOC'):
                                 new_name = folder_name + file7.replace("\n", "") + '.doc'
-                            with open(new_name, 'wb') as fh:
-                                fh.write(data)
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            if (extension_file_1 == 'zip') or (extension_file_1 == 'ZIP'):
+                                new_name = folder_name + file7.replace("\n", "") + '.zip'
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            if (extension_file_1 == 'ppt') or (extension_file_1 == 'PPT'):
+                                new_name = folder_name + file7.replace("\n", "") + '.ppt'
+                                with open(new_name, 'wb') as fh:
+                                    fh.write(data)
+                            #if (extension_file_1 == 'pdf') or (extension_file_1 == 'PDF'):
+                            #    new_name = folder_name + file7.replace("\n", "") + '.pdf'
+                            #    with open(new_name, 'wb') as fh:
+                            #        fh.write(data)
+                            #with open(new_name, 'wb') as fh:
+                                #fh.write(data)
         return 0
